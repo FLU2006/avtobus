@@ -1,0 +1,17 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:int="urn:EEC:Interaction:v1.0">
+    <soap:Header>
+        <wsa:To>EAEU://EEC/CP/P.TS.01/P.ACT.001</wsa:To>
+        <wsa:ReplyTo>
+            <wsa:Address>EAEU://KZ/CP/P.TS.01/P.TS.01.ACT.001</wsa:Address>
+        </wsa:ReplyTo>
+        <wsa:MessageID>urn:uuid:%s</wsa:MessageID>
+        <int:ProcedureID>urn:uuid:%s</int:ProcedureID>
+        <int:ConversationID>urn:uuid:%s</int:ConversationID>
+        <wsa:Action>int://CP/P.TS.01/1.0.1/P.TS.01.PRC.001/P.TS.01.TRN.001/P.TS.01.MSG.001</wsa:Action>
+        <int:Integration>
+            <int:TrackID>urn:uuid:%s</int:TrackID>
+            <int:AcceptTime>%s</int:AcceptTime>
+        </int:Integration>
+    </soap:Header>
+    <soap:Body>%s</soap:Body>
+</soap:Envelope>

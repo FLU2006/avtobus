@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="urn:EEC:R:TR:TS:01:ConformityDocsRegistryDetails:v1.0.1"
+           xmlns:doc="urn:EEC:R:TR:TS:01:ConformityDocsRegistryDetails:v1.0.1"
+           xmlns:ccdo="urn:EEC:M:ComplexDataObjects:v0.4.5"
+           xmlns:trcdo="urn:EEC:M:TR:ComplexDataObjects:v1.0.3"
+           version="1.0.1">
+
+    <xs:import namespace="urn:EEC:M:ComplexDataObjects:v0.4.5" schemaLocation="EEC_M_ComplexDataObjects_v0.4.5.xsd"/>
+    <xs:import namespace="urn:EEC:M:TR:ComplexDataObjects:v1.0.3" schemaLocation="EEC_M_TR_ComplexDataObjects_v1.0.3.xsd"/>
+    <!-- Сведения из единого реестра сертификатов и деклараций -->
+
+    <!-- R.TR.TS.01.001: Сведения из единого реестра сертификатов и деклараций (Сведения из единого реестра сертификатов и деклараций. Детали) -->
+    <xs:element name="ConformityDocsRegistryDetails" type="doc:ConformityDocsRegistryDetailsType">
+        <xs:annotation>
+            <xs:documentation>Сведения из единого реестра выданных сертификатов соответствия и зарегистрированных деклараций о соответствии</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <!-- R.TR.TS.01.001.CDT: Сведения единого реестра документов об оценке соответствия_ Детали (Сведения единого реестра документов об оценке соответствия_ Детали. Тип) -->
+    <xs:complexType name="ConformityDocsRegistryDetailsType">
+        <xs:annotation>
+            <xs:documentation>Сведения из единого реестра выданных сертификатов соответствия и зарегистрированных деклараций о соответствии</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="ccdo:EDocHeader"/>
+            <xs:element ref="trcdo:ConformityDocDetails" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
